@@ -1,6 +1,6 @@
 const jsonServer = require('json-server');
 const server = jsonServer.create();
-const router = jsonServer.router('db.json');
+const router = jsonServer.router(require('path').join(__dirname, 'db.json'));
 const middlewares = jsonServer.defaults();
 
 // Render define portas dinamicamente através do process.env.PORT
